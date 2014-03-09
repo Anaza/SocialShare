@@ -1,0 +1,6 @@
+{
+    "name": "social-icons",
+    "version": "1.0.2",
+    "description": "Return code to Raphael library. By this code you can draw social icons.",
+    "keywords": [ "social", "icons", "facebook", "vk", "twitter", "odnoklassniki", "vkontakte", "yandex" ]
+}

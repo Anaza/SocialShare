@@ -1,0 +1,77 @@
+.module-share {
+  line-height: 1;
+  font-family: Arial, 'Helvetica CY', sans-serif;
+}
+.module-share__counter {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  border: solid 1px #d3d3d3;
+  vertical-align: top;
+  padding: 3px 5px 2px 4px;
+  margin: 2px 0 0 7px;
+  color: #777777;
+  position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  background: #fff;
+}
+.module-share__counter.hidden {
+  display: none;
+}
+.module-share__pip {
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABESURBVHjafM0xCsAACAPA2P//Tl3c3Rwc3FMKtV1KD7IEQkASG3dnVb2FmbG7eUFmUlU5M1wHbiKCx+f892gTETwFGACBLmVwRJv9mgAAAABJRU5ErkJggg==) no-repeat;
+  width: 5px;
+  height: 7px;
+  display: block;
+}
+.module-share__button {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  margin-right: 7px;
+  font-size: 0;
+  white-space: nowrap;
+  line-height: 12px;
+  font-family: Arial, 'Helvetica CY', sans-serif;
+}
+.module-share__button a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  background: #b5b5b5;
+  cursor: pointer;
+  //margin-right: 8px;
+}
+
+.module-share__tw:hover {
+  background: #1daae1;
+}
+.module-share__od:hover {
+  background: #fd8400;
+}
+.module-share__vk:hover {
+  background: #43678c;
+}
+.module-share__fb:hover {
+  background: #385c98;
+}
+.module-share__ya:hover {
+  background: #f01518;
+}
+.module-share__jj:hover {
+  background: #43678c;
+}
+.clear{
+  clear: both;
+}

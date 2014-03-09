@@ -1,0 +1,21 @@
+{
+    "name": "social-share",
+    "version": "1.0.5",
+    "description": "Added social share button and counters",
+    "keywords": [ "social buttons", "share", "share counter", "social" ],
+    "author": {
+        "name": "Zaitseva Anastasia"
+    },
+    "main": "main.js",
+    "dependencies": {
+        "jquery": ">1.5.1"
+    },
+    "jam": {
+        "dependencies": {
+            "jquery": ">1.5.1",
+            "social-icons": "~1.0.0",
+            "raphael-amd": "~2.1.0",
+            "Modernizr": ">2.6.1"
+        }
+    }
+}

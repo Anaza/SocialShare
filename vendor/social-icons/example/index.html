@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
+
+<script src="require.js" type="text/javascript"></script>
+<script src="require.config.js" type="text/javascript"></script>
+
+<title>Всплывающее окно</title>
+</head>
+<body style="background: #F2F2F2;">
+  <div>Raphael</div>
+  <div id="win-subscribe-close" style="float: left; background: #666; margin-right: 5px;"></div>
+  <div id="win-subscribe-last" style="float: left; background: #666; margin-right: 5px;"></div>
+  <div id="win-subscribe-next" style="float: left; background: #666; margin-right: 5px;"></div>
+  <div id="win-subscribe-log-tw" style="float: left; background: #0061a6; margin-right: 5px;"></div>
+  <div id="win-subscribe-log-od" style="float: left; background: #ff8d00; margin-right: 5px;"></div>
+  <div id="win-subscribe-log-ya" style="float: left; background: #ff0303; margin-right: 5px;"></div>
+  <div id="win-subscribe-log-vk" style="float: left; background: #207cca; margin-right: 5px;"></div>
+  <div id="win-subscribe-log-jj" style="float: left; background: #0061a6; margin-right: 5px;"></div>
+  <div id="win-subscribe-log-fb" style="float: left; background: #0061a6; margin-right: 5px;"></div>
+
+  <div style="clear:both;">SVG</div>
+  <div id="win-subscribe-close-svg" style="width: 32px; height: 32px;float: left; background: #666; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-last-svg" style="width: 62px; height: 62px;float: left; background: #666; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-next-svg" style="width: 32px; height: 32px;float: left; background: #666; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-tw-svg" style="width: 32px; height: 32px;float: left; background: #0061a6; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-od-svg" style="width: 32px; height: 32px;float: left; background: #ff8d00; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-ya-svg" style="width: 64px; height: 64px;float: left; background: #ff0303; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-vk-svg" style="width: 32px; height: 32px;float: left; background: #207cca; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-jj-svg" style="width: 32px; height: 32px;float: left; background: #0061a6; margin-right: 5px; position: relative;"></div>
+  <div id="win-subscribe-fb-svg" style="width: 32px; height: 32px;float: left; background: #0061a6; margin-right: 5px; position: relative;"></div>
+
+<script>
+
+require(['./main.js'], function ( icons ) {
+    $(function() {
+        var iconsObject = icons.init();
+
+        var closeDiv = new Raphael('win-subscribe-close', iconsObject.close.width, iconsObject.close.height);
+        var close = closeDiv.path( iconsObject.close.code );
+        close.attr( iconsObject.close.attr );
+        $('#win-subscribe-close-svg').html( icons.getSVG('close') );
+
+        var lastDiv = new Raphael('win-subscribe-last', iconsObject.last.width, iconsObject.last.height);
+        var last = lastDiv.path( iconsObject.last.code );
+        last.attr( iconsObject.last.attr );
+        $('#win-subscribe-last-svg').html( icons.getSVG('last', "#000") );
+
+        var nextDiv = new Raphael('win-subscribe-next', iconsObject.next.width, iconsObject.next.height);
+        var next = nextDiv.path( iconsObject.next.code );
+        next.attr( iconsObject.next.attr );
+        $('#win-subscribe-next-svg').html( icons.getSVG('next') );
+
+        var twitterDiv = new Raphael('win-subscribe-log-tw', iconsObject.twitter.width, iconsObject.twitter.height);
+        var twitter = twitterDiv.path(iconsObject.twitter.code);
+        twitter.attr( iconsObject.twitter.attr );
+        $('#win-subscribe-tw-svg').html( icons.getSVG('twitter') );
+
+        var odnDiv = new Raphael('win-subscribe-log-od',  iconsObject.odnk.width,  iconsObject.odnk.height);
+        var odn = odnDiv.path( iconsObject.odnk.code );
+        odn.attr( iconsObject.odnk.attr );
+        $('#win-subscribe-od-svg').html( '<svg version="1.1"mlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + iconsObject.odnk.width + ' ' + iconsObject.odnk.height + '" style="overflow: hidden; position: absolute;"><defs/><path style="" fill="#ffffff" stroke="#ffffff" d="' + iconsObject.odnk.code + '" stroke-width="0"/></svg>' );
+
+        var yandexDiv = new Raphael('win-subscribe-log-ya',  iconsObject.yandex.width,  iconsObject.yandex.height);
+        var yandex = yandexDiv.path( iconsObject.yandex.code );
+        yandex.attr( iconsObject.yandex.attr );
+        $('#win-subscribe-ya-svg').html( '<svg version="1.1"mlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + iconsObject.yandex.width + ' ' + iconsObject.yandex.height + '" style="overflow: hidden; position: absolute;"><defs/><path style="" fill="#ffffff" stroke="#000" d="' + iconsObject.yandex.code + '" stroke-width="1"/></svg>' );
+
+        var vkDiv = new Raphael('win-subscribe-log-vk', iconsObject.vkontakte.width, iconsObject.vkontakte.height);
+        var vk = vkDiv.path( iconsObject.vkontakte.code );
+        vk.attr( iconsObject.vkontakte.attr );
+        $('#win-subscribe-vk-svg').html( '<svg version="1.1"mlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + iconsObject.vkontakte.width + ' ' + iconsObject.vkontakte.height + '" style="overflow: hidden; position: absolute;"><defs/><path style="" fill="#ffffff" stroke="#ffffff" d="' + iconsObject.vkontakte.code + '" stroke-width="0"/></svg>' );
+
+        var jjDiv = new Raphael('win-subscribe-log-jj', iconsObject.livejournal.width, iconsObject.livejournal.height); 
+        var jj = jjDiv.path( iconsObject.livejournal.code ); 
+        jj.attr( iconsObject.livejournal.attr ); 
+        $('#win-subscribe-jj-svg').html( '<svg version="1.1"mlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + iconsObject.livejournal.width + ' ' + iconsObject.livejournal.height + '" style="overflow: hidden; position: absolute;"><defs/><path style="" fill="#ffffff" stroke="#ffffff" d="' + iconsObject.livejournal.code + '" stroke-width="0"/></svg>' );
+
+        var fbDiv = new Raphael('win-subscribe-log-fb', iconsObject.facebook.width, iconsObject.facebook.height); 
+        var fb = fbDiv.path( iconsObject.facebook.code );
+        fb.attr( iconsObject.facebook.attr );  
+        $('#win-subscribe-fb-svg').html( '<svg version="1.1"mlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + iconsObject.facebook.width + ' ' + iconsObject.facebook.height + '" style="overflow: hidden; position: absolute;"><defs/><path style="" fill="#ffffff" stroke="#ffffff" d="' + iconsObject.facebook.code + '" stroke-width="0"/></svg>' );
+    });
+});
+</script>
+</body>
+</html>
